@@ -11,5 +11,6 @@ jobs:
       - name: Install Node.js (for Actions)
         run: apt-get update && apt-get install -yqq node.js
 
+      - uses: actions/checkout@v4
       - name: Build APK
         run: ./gradlew build
