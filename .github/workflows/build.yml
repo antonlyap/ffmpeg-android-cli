@@ -1,0 +1,14 @@
+on:
+  push:
+    tags: [ '*' ]
+
+jobs:
+  Build:
+    runs-on: ubuntu-22.04
+    container: saschpe/android-sdk:34-jdk22.0.1_8
+    steps:
+      - name: Install Node
+        run: apt install node.js
+
+      - name: Build APK
+        run: ./gradlew build
