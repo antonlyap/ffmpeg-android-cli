@@ -1,0 +1,12 @@
+[versions]
+agp = "8.4.0"
+kotlin = "1.9.0"
+smartExceptionJava = "0.2.1"
+
+[libraries]
+smart-exception-java = { module = "com.arthenica:smart-exception-java", version.ref = "smartExceptionJava" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
