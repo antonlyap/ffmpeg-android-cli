@@ -62,3 +62,6 @@ Hardware acceleration with MediaCodec is enabled. Based on https://github.com/ar
 This project's code and build artifacts (APK file and its derivatives) are licensed under the GNU LGPL.
 However, if using a variant of FFmpeg which includes GPL-licensed components, the build artifacts become
 subject to the GPL.
+
+More information: https://github.com/arthenica/ffmpeg-kit?tab=readme-ov-file#14-license
+and https://ffmpeg.org/legal.html
