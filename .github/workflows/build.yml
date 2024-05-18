@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-22.04
     container: saschpe/android-sdk:34-jdk22.0.1_8
     steps:
-      - name: Install Node
-        run: apt install node.js
+      - name: Install Node.js (for Actions)
+        run: apt-get update && apt-get install -yqq node.js
 
       - name: Build APK
         run: ./gradlew build
