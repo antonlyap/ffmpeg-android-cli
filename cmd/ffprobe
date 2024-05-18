@@ -1,0 +1,11 @@
+#!/system/bin/sh
+
+BASE_DIR=$(dirname $0)
+
+for LIB_DIR in $BASE_DIR/lib/{$(getprop ro.system.product.cpu.abilist)}; do
+    [ -d "$LIB_DIR" ] && break
+    unset -v LIB_DIR
+done
+
+LD_LIBRARY_PATH=$LIB_DIR:/system/lib64:/system/lib:/etc/lib \
+app_process -Djava.class.path=$BASE_DIR/classes.dex /sdcard ua.pp.antonlyap.ffmpeg.CLI ffprobe "$@"
