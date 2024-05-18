@@ -57,6 +57,19 @@ Hardware acceleration with MediaCodec is enabled. Based on https://github.com/ar
     ffprobe
     ```
 
+## Useful software and resources
+
+- [MediaCodecInfo](https://github.com/Parseus/codecinfo/releases) - displays the capabilities of
+  your device.
+- [rclone](https://rclone.org) - lets you mount a remote filesystem (e.g. to transcode files from
+  your computer).
+  Requires root access and the `fusermount3` binary. Some media containers
+  require `--vfs-cache-mode=writes` to function properly.
+- [FFmpeg Streaming](https://trac.ffmpeg.org/wiki/StreamingGuide) - also lets you access remote
+  files.
+- [rffmpeg](https://github.com/joshuaboniface/rffmpeg) - lets you control transcoding from another
+  machine over SSH.
+
 ## License
 
 This project's code and build artifacts (APK file and its derivatives) are licensed under the GNU LGPL.
