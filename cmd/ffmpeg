@@ -1,8 +1,10 @@
 #!/system/bin/sh
 
 BASE_DIR=$(dirname $0)
+ABIS=$(getprop ro.system.product.cpu.abilist)
+ABIS=${ABIS:-$(getprop ro.product.cpu.abilist)}
 
-for LIB_DIR in $BASE_DIR/lib/{$(getprop ro.system.product.cpu.abilist)}; do
+for LIB_DIR in $BASE_DIR/lib/{$ABIS}; do
     [ -d "$LIB_DIR" ] && break
     unset -v LIB_DIR
 done
