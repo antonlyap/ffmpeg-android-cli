@@ -9,4 +9,7 @@ for LIB_DIR in $BASE_DIR/lib/{$ABIS}; do
     unset -v LIB_DIR
 done
 
-app_process -Djava.class.path=$BASE_DIR/classes.dex -Djava.library.path=$LIB_DIR /sdcard ua.pp.antonlyap.ffmpeg.CLI ffmpeg "$@"
+app_process \
+  -Djava.class.path=$BASE_DIR/classes.dex \
+  -Djava.library.path=$LIB_DIR:/system/lib64:/system/lib \
+  /sdcard ua.pp.antonlyap.ffmpeg.CLI ffmpeg "$@"
